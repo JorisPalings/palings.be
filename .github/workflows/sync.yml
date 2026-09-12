@@ -1,42 +1,60 @@
 name: Sync catalogus vanaf Claude Artifact
- 
-# Haalt de publieke Claude Artifact-URL op en committed die als index.html
-# zodra de inhoud gewijzigd is. GitHub Pages herbouwt daarna vanzelf.
+
+# Rendert de Claude Artifact-pagina met een echte (headless) browser en
+# committed de resulterende HTML als index.html zodra de inhoud
+# gewijzigd is. GitHub Pages herbouwt daarna vanzelf.
+#
+# Waarom een browser en geen curl: de pagina op
+# claude.ai/code/artifact/... is zelf een lege "shell" die pas via
+# JavaScript de echte inhoud laadt in een <iframe> op een apart
+# subdomein. Een simpele curl (zoals een eerdere versie van deze
+# workflow deed) ziet daardoor nooit de echte catalogus, ongeacht de
+# share-instellingen van de artifact. Zie scripts/fetch-artifact.js
+# voor de details.
+#
+# LET OP -- geen garantie: claude.ai gebruikt Cloudflare bot-detectie.
+# Het is mogelijk dat verzoeken vanaf GitHub Actions alsnog geblokkeerd
+# worden; als deze workflow blijft falen ondanks een geldige,
+# publiek gedeelde artifact-link, is dat de meest waarschijnlijke
+# oorzaak en geen instelling die je kunt herstellen.
 #
 # Eenmalige instelling die nodig is:
 #  1. Deel de Claude Artifact publiek (Share-knop op de artifact-pagina)
 #     en kopieer de publieke link.
 #  2. Vervang ARTIFACT_URL hieronder door die link.
 #
-# Daarna: geen handmatige upload meer nodig. Deze workflow draait
-# vanzelf elke 15 minuten, of druk zelf op "Run workflow" in de
-# Actions-tab voor een directe sync.
- 
+# Daarna draait deze workflow vanzelf elke 15 minuten, of druk zelf op
+# "Run workflow" in de Actions-tab voor een directe sync.
+
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch: {}
- 
+
 permissions:
   contents: write
- 
+
 env:
   ARTIFACT_URL: "https://claude.ai/code/artifact/5291e29d-922d-42fe-9177-1adb1acd5e67"
- 
+
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
- 
-      - name: Download laatste versie van de Artifact
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Playwright installeren
         run: |
-          curl -sSL -A "Mozilla/5.0" "$ARTIFACT_URL" -o index.html.new
-          # sanity-check: bestand moet bestaan en er echt uitzien als de
-          # catalogus-pagina, niet een lege/foutpagina
-          test -s index.html.new
-          grep -qi "TOOL_DATA" index.html.new
- 
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Artifact renderen en HTML ophalen
+        run: node scripts/fetch-artifact.js
+
       - name: Committen als er iets veranderd is
         run: |
           if ! cmp -s index.html.new index.html; then
@@ -50,4 +68,3 @@ jobs:
             echo "Geen wijzigingen sinds vorige sync."
             rm -f index.html.new
           fi
- 
