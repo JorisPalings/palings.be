@@ -1,5 +1,5 @@
 <!doctype html><html><head><!-- frame-runtime --><script>window.__FRAME_PREAMBLE={"v":1,"capabilities":{"artifact":"artifact.Z2x4WzWL.js","assets":"assets.B-TeBG35.js","comments":"comments.bcDtmHz-.js","db":"db.CZqN5n8-.js","downloads":"downloads.By20cRKz.js","embed":"embed.swQslL0W.js","endpoints":"endpoints.LitwTvTv.js","mcp":"mcp.DNIsJHuR.js","network":"network.B5UA9Su4.js","permissions":"permissions.BQy3BjmI.js","room":"room.DZE7zT7V.js","sample":"sample.BEk0MOOy.js","self":"artifact.Z2x4WzWL.js","user":"user.DLeycE5q.js"},"transforms":"_transforms.CNapGGha.js","comments":"_comments.CoT-GWno.js","translate":"_translate.DqxC5ek1.js","ldx":"_ldx.CMCg6PeI.js"}                                                                                                                                                                                                                                                                                             </script><script>(function(){"use strict";var dn=3e5;function Ut(t,e){try{const n=t("navigation")[0],o=[n.responseStart,n.redirectEnd-n.redirectStart,n.domContentLoadedEventStart,e()];for(let a=0;a<o.length;a++){if(!(o[a]>=0&&o[a]<=3e5))return;o[a]=o[a]|0}return o}catch{return}}var zt=["light","dark","system"],Kt=/^[A-Za-z0-9_-]{1,64}$/,ut=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,$t=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function Wt(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||$t.has(e)}var ft="data-ldx-props";function Vt(t,e){if(e.toLowerCase()===ft)return!0;const n=t.getAttribute(ft);if(n===null)return!1;try{const o=JSON.parse(n);if(o===null||typeof o!="object"||Array.isArray(o))return!0;const a=e.toLowerCase();return Object.keys(o).some(l=>l.toLowerCase()===a)}catch{return!0}}var hn="http://www.w3.org/1999/xhtml",Xt="http://www.w3.org/2000/svg",Gt=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),Yt=new Set(["script","style"]);function Jt(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!Gt.has(e):t.namespaceURI===Xt?!Yt.has(e):!1}function qe(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function Zt(t,e){const n=t.length,o=e.length;let a=0;for(;a<n&&a<o&&qe(t.charCodeAt(a),e.charCodeAt(a));)a++;let l=0;for(;l<n-a&&l<o-a&&qe(t.charCodeAt(n-1-l),e.charCodeAt(o-1-l));)l++;return{p:a,s:l}}function Qt(t,e){const n=t.firstChild;if(t.childNodes.length!==1||n===null||n.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const o=n.data,a=o.length,l=e.length,{p:i,s:f}=Zt(o,e);i===a&&f===0&&a===l||n.replaceData(i,a-i-f,e.slice(i,l-f));const T=n.data,w=t.ownerDocument.getSelection?.()??null,O=w!==null&&w.rangeCount>0&&(w.anchorNode===n||w.focusNode===n)?{anchor:w.anchorNode,anchorOffset:w.anchorOffset,focus:w.focusNode,focusOffset:w.focusOffset}:null;let _=-1,R=-1;for(let h=0;h<T.length&&h<e.length;h++){const M=T.charCodeAt(h),K=e.charCodeAt(h);M!==K&&qe(M,K)&&(_<0&&(_=h),R=h)}const m=_>=0;if(m&&n.replaceData(_,R-_+1,e.slice(_,R+1)),m&&O!==null&&O.anchor!==null&&O.focus!==null)try{w.setBaseAndExtent(O.anchor,O.anchorOffset,O.focus,O.focusOffset)}catch{}}var er=new Set(["html","head","body","frameset"]);function tr(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&er.has(t.localName)}function rr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!Kt.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[n,o]of Object.entries(e.attrsSet))if(!ut.test(n)||typeof o!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const n of e.attrsRemoved)if(typeof n!="string"||!ut.test(n))return!1}return!0}function nr(t,e){if(t===null||typeof t!="object")return!1;const{seq:n,elements:o}=t;if(typeof n!="number"||!Number.isSafeInteger(n)||!Array.isArray(o)||o.length===0||o.length>64)return!1;for(let a=0;a<o.length;a++)if(!e(o[a]))return!1;return!0}function or(t){return t===null||typeof t!="object"?!1:nr(t.__frame_patch,rr)}function ar(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function lr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function sr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function ir(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const n=e.theme;return typeof n=="string"&&zt.includes(n)}var cr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],ur=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function fr(t){return typeof t=="string"&&ur.includes(t)?t:"other"}var dr=Object.freeze({until:null,now:!1}),hr="__claude_hot",pr="__claude_hot_in",mr=/^__claude_hot(?:_in)?(?::|$)/,dt=/^[0-9a-z]{1,32}$/,Be=t=>t===void 0?hr:"__claude_hot:"+t,de=t=>t===void 0?pr:"__claude_hot_in:"+t;function _r(t,e){const n=[];for(let o=0;o<t.length;o++){const a=t.key(o);a!==null&&a!==e&&mr.test(a)&&n.push(a)}for(const o of n)t.removeItem(o)}function vr(t){let e=null;try{e=z(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!dt.test(e.k)?null:he(e.g)?{k:e.k,g:e.g}:{k:e.k}}var pn=262144,yr=3e3,ht=/^[a-z0-9._:-]{1,64}$/,gr=["none","hot-restart","hard-reload"],wr=["asset","doc","added","removed"],br=1500,Er=/^[0-9a-f]{64}$/;function z(t){return t!==null&&typeof t=="object"?t:null}function he(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function pt(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function Sr(t){return t===void 0||typeof t=="string"&&ht.test(t)}function mt(t){const e=z(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function Ue(t){const e=z(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&pt(e.seq)&&typeof e.handoff=="string"&&cr.includes(e.handoff)&&Sr(e.note)}function Ar(t){const e=z(t);return e!==null&&he(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||Ue(e.from))}function kr(t){const e=z(t);return e!==null&&e.kv===1&&he(e.gen)&&Ue(e.from)&&Object.hasOwn(e,"data")}function Rr(t){const e=z(t);return e!==null&&e.__frame_hot_snapshot===!0&&he(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||mt(e.deadline))&&pt(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function Tr(t){const e=z(t);return e!==null&&e.__frame_hot_start===!0&&he(e.gen)&&Ue(e.from)}function _t(t){const e=z(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function vt(t){if(t==null||typeof t=="string")return!0;const e=z(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function Or(t){const e=z(t);return e!==null&&typeof e.path=="string"&&wr.includes(e.kind)&&vt(e.from)&&vt(e.to)}function Lr(t){return t===null?null:Object.freeze(t.filter(Or))}function Pr(t){const e=z(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&_t(e.from)&&_t(e.to)&&(e.changed===null||Array.isArray(e.changed))&&gr.includes(e.required)&&mt(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Er.test(e.preflight))}var oe=/^[\w.-]+\.js$/;function Mr(t,e,n){return n?"inert":typeof e=="string"&&oe.test(e)?t?[e]:"inert":t?"inert":"framed"}var yt=Object.freeze({[Symbol("claude.hot.restart")]:!0});function gt(t,e){let n;try{n=t??sessionStorage}catch{return null}const o=Be(e?.k),a=de(e?.k);let l=null;try{l=n.getItem(o)}catch{}try{n.removeItem(o)}catch{}try{_r(n,a)}catch{}let i=null;if(l!==null&&!(e!==null&&e.g===void 0))try{const f=JSON.parse(l);kr(f)&&(e===null||f.gen===e.g)&&(i=f)}catch{}if(i===null)try{n.removeItem(a)}catch{}return i}function Nr(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var Cr=/^[^/\\?#]{1,128}$/,wt=t=>Cr.test(t)&&t!=="."&&t!=="..";function bt(t,e,n){const o=new URL(t),a="/_f/"+e+"/";if(!e||!o.pathname.startsWith(a)||!wt(n))return null;const l=o.search.slice(1).split("&").filter(i=>!/^__frame_t(?:=|$)/.test(i)).join("&");return o.origin+"/_f/"+n+"/"+o.pathname.slice(a.length)+(l?"?"+l:"")+o.hash}var Ae="{}";function pe(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function Et(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function St(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function jr(t,e,n,o=null){const a=setTimeout,l=clearTimeout,i=queueMicrotask,f=performance.now.bind(performance),T=new TextEncoder;let w=null,O=null;try{w=history,O=w.replaceState.bind(w)}catch{}const _=(...r)=>{try{console.warn(...r)}catch{}};let R=Nr(),m=null;try{m=sessionStorage}catch{}const h={storage:m,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:R,key:o?.k};let M=o?.k;const K=typeof requestAnimationFrame=="function"?requestAnimationFrame:r=>a(()=>r(f()),16);let v=e?.data??{},L=pe(e?.from),S=e?.gen??0,N=e!==null,$=!1,J=!1,W=null,_e=!1;const ve=new AbortController;let ye=null,C=null,ge=null,we=!1,s=()=>{};const p=new Promise(r=>{s=r});let b=!1,j=!1,I=!1,B,A=null,U=!1,le=!1;const se=r=>{for(const c of[Be(r),de(r)])try{m?.removeItem(c)}catch{}},D=(r,c)=>{try{c!==null&&n.post(r,c)}catch{}},Z=()=>{const r={__frame_hot:!0,ready:C!==null,accept:ge!==null};b&&(r.readData=!0),I&&(r.threw=!0),A?.assess&&(r.preflight=!0),D(r,W)};let be=!1,d=!1,H=!1,X=!1;const G=()=>{be||!_e||H||(be=!0,D({__frame_reveal_hold:!0},"*"))},re=()=>new Promise(r=>{let c,u=0;const y=P=>{if(c===void 0)c=P;else if(P!==c||++u>=8){r();return}try{K(y)}catch{r()}};try{K(y)}catch{r()}}),te=()=>{H=!0,D({__frame_reveal_ready:!0},"*")},Ee=r=>{d||(d=!0,r.then(c=>{if(c===!1)return;let u=null;try{u=A?.settle?.()??null}catch{}return(u===null?re():new Promise(y=>{a(y,50),Promise.resolve(u).then(y,y)}).then(re)).then(te)}))},rn=()=>{if(X||!H)return;X=!0;const r=()=>{try{A?.afterReveal?.()}catch{}};r(),re().then(()=>{r(),te()})},Ne=(r=!1)=>{if(we||C===null||!N||!J)return;we=!0;const c=C,u=v;i(()=>{let y;try{y=c(u)}catch(x){throw s(!1),x}let P=!1;try{P=typeof y?.then=="function"}catch{}if(!P){s(!0);return}Promise.resolve(y).then(()=>s(!0),x=>{s(!1),i(()=>{throw x})})}),Ee(r?p:n.dcl.then(()=>p))},Ce=r=>typeof r=="string"&&ht.test(r)?r:void 0,Qe=r=>{const c={__frame_hot_restart:!0},u=Ce(r?.note);u!==void 0&&(c.note=u),r?.required==="hard-reload"&&(c.required="hard-reload"),D(c,W)},It=Object.freeze({get data(){return J||(j=!0),!N&&!b&&(b=!0,J&&Z()),v},get from(){return L},get gen(){return S},signal:ve.signal,snapshot(r){typeof r=="function"&&(ye=r)},ready(r){typeof r!="function"||C!==null||(C=r,G(),Z(),$&&D({__frame_hot_ready:!0,gen:S},W),Ne())},accept(r){typeof r=="function"&&(ge=r,Z())},restart(r){const c={note:r?.note,required:r?.required};if(J){Qe(c);return}const u=B;B={note:Ce(u?.note)??c.note,required:u?.required==="hard-reload"||c.required==="hard-reload"?"hard-reload":void 0}}});let je=null,xt=()=>{};const nn=new Promise(r=>{xt=r});let on=null;const Ft=()=>on??=n.dcl.then(()=>{let r=!1;try{r=je!==null&&je.expect()}catch{}if(!r)return;const c=je.maxMs;return new Promise(u=>{nn.then(u),a(u,c)})}),Dt=()=>{if(!U||le||A===null)return;le=!0;const r=A;Ft().then(()=>{try{H||r.afterStart(St(e),!1)}catch{}})},Ht=r=>{e!==null&&j&&(b=!0),v={},L=null,S=0;try{m?.removeItem(de(o?.k))}catch{}e!==null&&!r&&Ee(n.dcl.then(()=>C!==null?p:void 0))},an=()=>{U=!0,Ee(Ft().then(()=>C!==null?p:void 0)),Dt()};try{addEventListener("error",()=>{I||C!==null||(I=!0,Z())})}catch{}let ne=-1,et,tt,Se=!0,rt=!1,nt,Ie=null;const ot=r=>{const c=Ie===null;Ie=Se&&r[0]!=="withheld"?r:["withheld",r[1],Ae];let u=r[0];if(Se&&u!=="withheld"){const P={ver:R,handoff:u};et!==void 0&&(P.seq=et),tt!==void 0&&(P.note=tt);try{if(m===null)throw new Error("no storage");m.setItem(Be(M),'{"kv":1,"gen":'+ne+',"from":'+JSON.stringify(P)+(nt!==void 0?',"k":'+JSON.stringify(nt):"")+',"data":'+(u==="ok"?r[2]:Ae)+"}")}catch{u="unavailable"}}else{u="withheld",se(M);try{A?.release?.()}catch{}}const y={__frame_hot_snapshotted:!0,gen:ne,handoff:u,bytes:r[1]};r[3]!==void 0&&(y.errName=r[3]),D(y,W),c&&(u==="snapshot_error"||u==="unclonable"||u==="oversize")&&_("claude.hot: snapshot",u,r[3])},ie=r=>{try{return fr(r?.name)}catch{return"other"}},ce=(r,c,u=0)=>ot(c===void 0?[r,u,Ae]:[r,u,Ae,ie(c)]),ln=r=>{if(r.gen<=ne)return;const c=ne>=0;if(ne=r.gen,et=r.seq,tt=Ce(r.note),typeof r.key=="string"&&dt.test(r.key)&&r.key!==M&&(se(M),M=r.key),Se&&=r.handoff!==!1,c){Ie!==null?ot(Ie):rt&&D({__frame_hot_held:!0,gen:ne},W);return}ve.abort();const u=Object.freeze({handoff:Se,timeoutMs:r.timeoutMs,deadline:r.deadline??dr}),y=ye,P=()=>{if(Se)try{nt=A?.capture()}catch{}if(y===null){ce("empty");return}let E=!1;const q=a(()=>{E||(E=!0,ce("snapshot_timeout"))},Math.max(0,u.timeoutMs));Promise.resolve().then(()=>y(u)).then(ue=>{if(E)return;E=!0,l(q);let Q;try{Q=JSON.stringify(ue)}catch(at){ce("unclonable",at);return}if(typeof Q!="string"){ce("unclonable");return}let ee=Q.length;try{ee=T.encode(Q).length}catch{}if(ee>262144){ce("oversize",void 0,ee);return}ot(["ok",ee,Q])},ue=>{E||(E=!0,l(q),ce("snapshot_error",ue))})};let x=null;try{x=A?.holdForIme()??null}catch{}if(x===null)P();else{rt=!0,D({__frame_hot_held:!0,gen:ne},W);const E=()=>{rt=!1,P()};x.then(E,E)}},sn=r=>{if(!$||N||C===null||r.gen!==S)return;let c=null;try{c=gt(m,o&&{k:o.k,g:r.gen})}catch{}if(c!==null&&c.gen!==r.gen){c=null;try{m?.removeItem(de(o?.k))}catch{}}v=c?.data??{},L=Et(pe(c?.from??r.from),pe(r.from)),c!==null&&(S=c.gen),N=!0,$=!1;const u=St(c);p.then(y=>{try{y&&A?.afterStart(u,!0)}catch{}}),Ne(!0)};let xe=0;const cn=r=>{const c=ge;if(c===null||r.id<=xe)return;xe=r.id;const u=A?.assess;if(r.preflight===void 0||u===void 0){qt(r,c);return}let y=!1;const P=q=>{y||(y=!0,l(E),r.id===xe&&qt(r,c,q))},x=()=>P(u.timeout(r)),E=a(x,br+100);u.run(r,window).then(P,x)},qt=(r,c,u)=>{let y,P=!1,x=!1,E,q,ue=null;const Q=g=>{if(x)return!1;if(E!==void 0&&E!==g)return _(`claude.hot: u.${g}() ignored - u.${E}() was called first`),!1;const Y=E===void 0;return E=g,Y},ee=g=>{E="restart",_(`claude.hot: ${g} - restarting`)},at=()=>{if(!Q("adopt")||r.id!==xe)return;const g=r.to.ver;if(Fe.required!=="none"){ee(`u.adopt() needs required 'none', it is '${Fe.required}'`);return}if(!wt(g)){ee("u.adopt() cannot address this version");return}if(!R||g===R)return;const Y=R,V=h.entry;let De="",st,fe=null,He;try{De=location.href,st=w.state,fe=bt(De,Y,g),fe!==null&&(O(st,"",fe),location.pathname.startsWith("/_f/"+g+"/")?fe=location.href:He="navigate event canceled")}catch(ct){He=ie(ct)}if(He!==void 0){q="adopt_failed",ee(`adopt_failed ${He}; URL not changed`);return}fe===null?(q="adopt_skipped",_(`claude.hot: adopt_skipped - page already left /_f/${Y}/; URL not changed, update still applied`)):q="adopted",R=h.ver=g;try{h.entry=bt(V,Y,g)??V}catch{}const it=fe;ue=()=>{if(R===g){if(it!==null)try{if(location.href!==it)_("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(O(st,"",De),location.href!==De){_("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}q="adopt_reverted",_("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(ct){_(`claude.hot: adopt_revert_failed ${ie(ct)} - URL still at the new version`);return}R=h.ver=Y,h.entry=V,it===null&&(q=void 0)}}},Fe=Object.freeze({from:{ver:r.from.ver,seq:r.from.seq},to:{ver:r.to.ver,seq:r.to.seq},changed:Lr(r.changed),required:r.required,deadline:r.deadline,adopt:at,defer(){return Q("defer")&&Fe.deadline.now&&ee("u.defer() past the deadline"),yt},restart(g){return Q("restart"),E==="restart"&&!x&&(y??=Ce(g?.note),P||=g?.required==="hard-reload"),yt},...u?.update}),un=(g,Y)=>{x=!0,g==="threw"?(ue?.(),y??=ie(Y).toLowerCase()):E===void 0&&_(g==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const V={__frame_hot_verdict:!0,id:r.id};V.verdict=g==="threw"||E===void 0||E==="restart"?"restart":E==="adopt"?"applied":"deferred",V.verdict==="restart"&&(P&&(V.required="hard-reload"),y!==void 0&&(V.note=y)),q!==void 0&&(V.verdict==="applied"||q!=="adopted")&&(V.adopt=q),D(Object.assign(V,u?.verdict),W)};let Bt=!1;const lt=(g,Y)=>Bt?!1:(Bt=!0,l(fn),un(g,Y),!0),fn=a(()=>lt("timeout"),r.verdictTimeoutMs);Promise.resolve().then(()=>c(Fe)).then(()=>lt("settled"),g=>{!lt("threw",g)&&E==="adopt"&&Qe({note:ie(g).toLowerCase()}),_("claude.hot: accept",ie(g))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:It,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:It,boot:h,afterConnect(){_e=!0,(e!==null||C!==null)&&G()},onInit(r,c){W=c,J=!0;const u=Ar(r)?r:null;u?.phase==="final"&&e!==null&&e.gen===u.gen?(N=!0,L=Et(L,pe(u.from)),an()):($=u?.phase==="pending",Ht($),N=!$,S=u?.gen??0,L=pe(u?.from)),Z(),$&&C!==null&&D({__frame_hot_ready:!0,gen:S},c),B!==void 0&&(Qe(B),B=void 0),Ne()},onNoInit(){J=!0,Ht(!1),N=!0,Ne()},onShell(r){return r?.__frame_revealed===!0?(rn(),!1):Rr(r)?(ln(r),!0):Tr(r)?(sn(r),!0):Pr(r)?(cn(r),!0):!1},attachExtras(r){A=r,Dt(),r.assess&&Z()},inSlot:()=>de(M),hydration(r,c){je??={expect:r,maxMs:c}},hydrated(){xt()},carried(){return N?v:{}},presented:()=>H}}var mn="frame_ldx_runtime",Ir="frame_ldx_build",_n="script#an-form",xr=256;function At(t,e,n){for(const o of t)n(o)&&t.delete(o);t.size>=xr&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function ze(t,e,n){try{const o=t[e];if(typeof o!="function")return;t[e]=function(...a){const l=o.apply(this,a);try{n(this)}catch{}return l}}catch{}}var Ke;function Fr(){if(Ke)return Ke;const t={media:new Set,contexts:new Set,onStart:null,onPause:null};Ke=t;const e=window.HTMLMediaElement?.prototype;e&&(ze(e,"play",a=>{At(t.media,a,l=>l.paused),t.onStart?.(a)}),ze(e,"pause",a=>t.onPause?.(a)));const n=window.AudioContext,o=window.AudioNode?.prototype;return n&&o&&ze(o,"connect",a=>{const l=a.context;l instanceof n&&(At(t.contexts,l,i=>i.state==="closed"),t.onStart?.(l))}),t}function Dr(t){let e=window;for(let n=0;e.parent&&e.parent!==e&&n<8;n++)if(e=e.parent,t(e))return!0;return!1}function Hr(){let t=null;const e=()=>t??parent,n=o=>t?o===t:Dr(a=>a===o);return{post(o,a){if(t){e().postMessage(o,a);return}let l=parent;for(let i=0;i<8&&(l.postMessage(o,a),!(!l.parent||l.parent===l));i++)l=l.parent},on(o){const a=l=>{const i=l.source;n(i)&&o(l.data,l.origin,l.isTrusted,()=>{t??=i})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:o=>({post(a,l){if(l?.activation){e().postMessage(a,{targetOrigin:o,includeUserActivation:!0});return}if(l?.transfer){e().postMessage(a,o,l.transfer);return}e().postMessage(a,o)},on(a,l){const i=f=>{n(f.source)&&f.origin===o&&a(f.data,f)};return addEventListener("message",i,l),()=>removeEventListener("message",i,l)}})}}function qr(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var $e="__frame_scroll",Br=150,Ur=310,zr=160,Kr=3e4;function $r(){let t=0,e=!1,n=!1,o=!1,a=0,l=null;const i=v=>{try{sessionStorage.setItem($e,JSON.stringify({y:v}))}catch{}},f=()=>{if(clearTimeout(t),l===null)return;const v=l;l=null,i(v)},T=()=>{if(e){e=!1;return}n=!0,l=scrollY,clearTimeout(t),t=setTimeout(f,Br)};try{addEventListener("scroll",T,{passive:!0}),addEventListener("pagehide",f)}catch{}const w=()=>{let v;try{v=sessionStorage.getItem($e)}catch{return null}if(v===null)return null;let L;try{L=JSON.parse(v)}catch{L=null}const S=L?.y;if(!(typeof S=="number"&&Number.isFinite(S)&&S>=0)){try{sessionStorage.removeItem($e)}catch{}return null}return S};let O=!1;const _=v=>{try{const L=scrollY;scrollTo({top:v,left:0,behavior:"instant"}),a=v,o=!0,clearTimeout(t),l=null,i(v);const S=scrollY;S!==L&&(e=!0),S!==v&&!O&&(O=!0,addEventListener("load",()=>{try{if(scrollY===S){const N=w();_(N!==null?N:a)}}catch{}},{once:!0}))}catch{}},R=()=>{try{return!!location.hash}catch{return!0}};let m=!1;const h=()=>{try{if(m||innerWidth>Ur||innerHeight>zr)return;m=!0;const v=Date.now(),L=()=>{try{removeEventListener("resize",L)}catch{}if(Date.now()-v>Kr||n||R())return;const S=w();_(S!==null?S:a)};addEventListener("resize",L)}catch{}};let M=!1,K=!1;return{restore(){if(M||(M=!0,R()))return;const v=w();v!==null&&(_(v),h())},promoted(){if(K||(K=!0,R()))return;const v=w();v!==null?(_(v),h()):o&&_(a)}}}function Wr(t,e,n,o){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:T=>T})??null}catch{}const l=window.Worker,i=l?.prototype,f=Object.freeze({Worker:l,workerOn:i?.addEventListener,workerPost:i?.postMessage,workerTerminate:i?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});n(t).then(T=>T?.bootTopLevel?T.bootTopLevel(f,o):o.settle()).catch(()=>o.settle())}var vn="modulepreload",yn=function(t){return"/"+t},gn={},Vr=function(e,n,o){let a=Promise.resolve();function l(i){const f=new Event("vite:preloadError",{cancelable:!0});if(f.payload=i,window.dispatchEvent(f),!f.defaultPrevented)throw i}return a.then(i=>{for(const f of i||[])f.status==="rejected"&&l(f.reason);return e().catch(l)})},Xr=window===top,kt=Object.getOwnPropertyDescriptor(window,"claude"),ke=Mr(Xr,window.__FRAME_PREAMBLE?.topLevel,kt?.writable===!1),We=typeof ke=="object"&&ke[0],k=We?qr():Hr();(function(){const t=Object.defineProperty,e=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let o=0;for(let a=0;a<n.length;a++){const l=n[a];try{t(e,l,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[l]}catch{}try{t(e,l,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[l]=="function"&&o++}if(o&&ke==="framed")try{k.post({__frame_rtc_lockdown_failed:o},"*")}catch{}})();var Gr=1e4,Yr=2e3,Ve=2e3,Rt=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function Tt(t){for(const e of Rt)if(e.endsWith(":*"))try{const n=new URL(t);if(`${n.protocol}//${n.hostname}:*`===e)return!0}catch{}else if(t===e)return!0;return!1}var Re=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),Te=window.__FRAME_PREAMBLE?.transforms,Xe=window.__FRAME_PREAMBLE?.comments,Ge=window.__FRAME_PREAMBLE?.translate,me=window.__FRAME_PREAMBLE?.ldx;function Ot(t){return Vr(()=>import("/_runtime/"+t),void 0)}var Oe=new Set,Jr=setTimeout,Zr=800+800*Math.random();function ae(t){return Ot(t).catch(()=>new Promise(e=>Jr(e,Zr)).then(()=>Ot(t+"?r=1")).then(e=>(e!==void 0&&Oe.add(t),e)))}function Lt(t,e,n){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},transforms:new Map,shellOrigin:e,shell:n,mount:Ze,hooks:Pe,pipe:()=>({wrap:(o,a)=>(...l)=>{try{return a(...l)}catch(i){return Promise.reject(i)}}})}}var Le=null,F=null;function Pt(t,e,n){try{Object.defineProperty(t,e,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var Ye=!1,Pe={editBefore:null,edit:null};function Qr(t,e,n=!1){const o=[];let a;if(n)try{Pe.editBefore?.(t)}catch{}for(const l of t.elements){const i=document.querySelector(`[data-id="${l.target}"]`);if(!i){a=l.target;break}if([...Object.keys(l.attrsSet??{}),...l.attrsRemoved??[]].some(f=>!Wt(f)||Vt(i,f))){a=l.target;break}if(l.text!==void 0&&(!Jt(i)||tr(i))){a=l.target;break}for(const[f,T]of Object.entries(l.attrsSet??{}))if(!Nt(i,f)){try{i.setAttribute(f,T)}catch{}Mt(i,f,T)}for(const f of l.attrsRemoved??[])Nt(i,f)||(i.removeAttribute(f),Mt(i,f,null));typeof l.text=="string"&&Qt(i,l.text),o.push(l.target)}if(n)try{Pe.edit?.(t.seq,o,a)}catch{}if(a!==void 0){k.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:o}}))}catch{}}function Mt(t,e,n){if(!(t instanceof HTMLInputElement))return;const o=e.toLowerCase();o==="checked"?t.checked=n!==null:o==="value"&&t.type!=="file"&&(t.value=n??"")}function Nt(t,e){const n=e.toLowerCase(),o=t;return n==="data-id"||(n==="value"||n==="checked")&&(o.__artifactSecret===!0||/^(password|hidden|file)$/.test(o.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${o.autocomplete??""}`))}function Ct(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,Ye=!0):Ye&&(delete e.dataset.theme,e.style.colorScheme="",Ye=!1)}var Me=new Map;function en(){let t;const e={u:new Promise(n=>{t=n}),r:n=>{e.done=!0,t(n)},done:!1,nulled:!1};return e}function Je(){for(const t of Me.values())t.done||(t.nulled=!0,t.r(null))}var tn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),Ze=(t,e)=>{const n=Me.get(t);if(!n||n.done){n?.nulled&&F&&k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},F);return}const o=typeof e=="function"?Object.setPrototypeOf(e,tn):Object.assign(Object.create(null),e);typeof o.then=="function"&&delete o.then,n.r(Object.freeze(o))};function jt(){const t=kt?.value??{};Pt(window,"claude",t);for(const e of Object.keys(Re)){if(t[e]!==void 0){Pt(t,e,t[e]);continue}Me.set(e,en())}if(t.use===void 0){const e=n=>{if(typeof n!="string"||!Object.hasOwn(Re,n))return Promise.resolve(null);const o=Me.get(n);return o?o.u:Promise.resolve(t[n]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(ke==="framed"){const t=Te&&oe.test(Te)?ae(Te).catch(()=>{}):Promise.resolve(void 0),e=s=>{if(s.type==="auxclick"&&s.button!==1)return;const p=s.target,b=p&&p.closest?p.closest("a[href],area[href]"):null;if(!b)return;const j=b.getAttribute("href");if(!j)return;let I;try{I=new URL(j,document.baseURI)}catch{return}if((I.protocol==="http:"||I.protocol==="https:")&&I.origin!==location.origin){s.preventDefault();const B=(b.getAttribute("target")??"").toLowerCase(),A=s.type==="auxclick"||s.metaKey||s.ctrlKey||s.shiftKey||s.altKey||!["","_self","_top","_parent"].includes(B);k.post({__frame_nav:!0,url:I.href,newTab:A},"*")}};addEventListener("click",e,!0),addEventListener("auxclick",e,!0);const n={},o=s=>{s.isTrusted&&(n.pointer=!0)},a=s=>{s.isTrusted&&(n.click=!0)};addEventListener("pointermove",o,{capture:!0,passive:!0}),addEventListener("click",a,{capture:!0,passive:!0});const l={cb:null};addEventListener("keydown",s=>l.cb?.(s),!0);const i={cb:null};addEventListener("keydown",s=>i.cb?.(s));const f=Fr();t.then(s=>s?.installEscapeForward?.(l,p=>{F&&k.post(p,F)})),t.then(s=>{try{s?.installFocusKeep?.()}catch{}}),t.then(s=>{if(!s?.wireNav)return;const p=k.port("*");s.wireNav(p),removeEventListener("click",e,!0),removeEventListener("auxclick",e,!0),removeEventListener("pointermove",o,!0),removeEventListener("click",a,!0),s.wireEngagement?.(n,p)});let T=null;try{T=$r()}catch{}const w=document.readyState==="loading"?new Promise(s=>document.addEventListener("DOMContentLoaded",()=>s(),{once:!0})):Promise.resolve();let O=null,_=null;try{_=vr(window.name),O=gt(null,_)}catch{}const R=jt();let m=null;try{m=jr(R,O,{post:(s,p)=>k.post(s,p),dcl:w},_)}catch{}t.then(s=>{try{m&&s?.installHotExtras?.(m)}catch{}});let h=null;const M=()=>Array.isArray(h?.flags)&&h.flags.includes("frame_ldx_runtime")&&!!me&&oe.test(me)&&document.querySelector("script#an-form")!==null;try{m?.hydration(M,yr)}catch{}let K=null,v=0;const L=k.on((s,p,b,j)=>{Tt(p)&&ar(s)&&(j(),h=s.__frame_init,F=p,L(),clearTimeout(v),K?.())});k.post({__frame_connect:!0},"*");try{m?.afterConnect()}catch{}const S=setTimeout,N=clearTimeout;let $=()=>NaN,J=()=>[];try{$=performance.now.bind(performance),J=performance.getEntriesByType.bind(performance)}catch{}let W=0;const _e=()=>{try{k.post({__frame_alive:!0},"*")}catch{}W=S(_e,Yr)},ve=()=>N(W);_e(),addEventListener("load",ve,{once:!0});const ye=new Promise(s=>{K=s,v=setTimeout(()=>{L(),s()},Gr)}),C=new WeakSet;addEventListener("error",s=>{s.target&&C.add(s.target)},!0);const ge=()=>{let s=[];try{s=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(b=>!b.sheet&&!b.disabled&&!C.has(b)&&b.getAttribute("href")&&URL.canParse(b.href)&&(!b.media||matchMedia(b.media).matches))}catch{}let p=s.length;return p===0?Promise.resolve():new Promise(b=>{try{const j=Ve-$(),I=S(b,j>0?j<Ve?j:Ve:0),B=()=>{--p===0&&(N(I),b())};for(const A of s)A.addEventListener("load",B,{once:!0}),A.addEventListener("error",B,{once:!0})}catch{b()}})};w.then(()=>{try{T?.restore()}catch{}}),Promise.all([ye,w,t]).then(([,,s])=>{if(h?.hostOverlays!==!0||!F)return;let p=!1;try{p=s?.declaresCover?.()===!0}catch{}k.post({__frame_layout:{cover:p}},F)});const we={cb:null};k.on((s,p)=>{if(Tt(p)&&lr(s)){try{T?.promoted()}catch{}we.cb?.()}}),ye.then(async()=>{if(!h||!F){Je();try{m?.onNoInit()}catch{}return}if(Ct(h.theme),h.hostVisible===!1&&t.then(d=>d?.applyHostVisible?.(!1,f)),h.hostKeys!==void 0){const d=F,H=h.hostKeys;t.then(X=>X?.installHostKeyForward?.(i,H,G=>k.post(G,d)))}try{m?.onInit(h.hot,F)}catch{}const s=F,p=k.port(s);let b=!1,j=!1;k.on((d,H,X)=>{if(H!==s)return;try{if(m?.onShell(d))return}catch{}if(ir(d)&&Ct(d.__frame_theme.theme),sr(d)){const te=d.__frame_host_visible.visible;t.then(Ee=>Ee?.applyHostVisible?.(te,f))}or(d)&&Qr(d.__frame_patch,s,X);const G=d?.__fc_mode;G&&typeof G=="object"&&!b&&Xe&&oe.test(Xe)&&(b=!0,ae(Xe).then(te=>te.install?.(s,G.on===!0,p)).catch(()=>{}));const re=d?.__ft_cmd;re&&typeof re=="object"&&!j&&Ge&&oe.test(Ge)&&(j=!0,ae(Ge).then(te=>te.install?.(s,re,p)).catch(()=>{}))});const I=Object.keys(h.capabilities??{}).filter(d=>Object.hasOwn(Re,d)).map(d=>[d,Re[d]]).filter(d=>typeof d[1]=="string"&&oe.test(d[1])),B=await Promise.allSettled(I.map(([,d])=>ae(d))),A=await t,U=F;if(A?.buildBoot||k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},U),A?.buildBoot)try{Le=A.buildBoot(h,A.TRANSFORMS??{},{shellOrigin:U,mount:Ze,hooks:Pe,shell:p},d=>k.post({__frame_cap_telemetry:d},U))}catch{k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms",phase:"install"}},U),Le=Lt(h,U,p)}else Le=Lt(h,U,p);const le=(d,H)=>k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:d,phase:H}},U),se=d=>k.post({__frame_cap_recovered:{cap:d}},U);A?.buildBoot&&Oe.has(Te??"")&&se("_transforms");const D=Le;B.forEach((d,H)=>{const[X,G]=I[H];if(d.status!=="fulfilled"){le(X);return}Oe.has(G)&&se(X);try{d.value?.install?.(D)}catch{le(X,"install")}}),Je(),await w,await ge(),ve();const Z=Ut(J,$);k.post(Z?{__frame_ready:!0,nav:Z}:{__frame_ready:!0},F),t.then(d=>d?.installSizeReporter?.(U,we,p));let be=!1;try{be=M()}catch{}me&&be?ae(me).then(d=>d?.boot?.({shellOrigin:s,build:D.flags.has(Ir),hot:m?.hot??null,carried:m?.carried(),presented:()=>m?.presented()??!0})).catch(()=>!1).then(d=>{m?.hydrated(),d!==!0?le("_ldx"):Oe.has(me)&&se("_ldx")}):m?.hydrated()})}else We&&(jt(),Wr(We,Rt,ae,{settle:Je,mount:Ze}))})();</script><!-- /frame-runtime --><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>My Power Tools</title>
+<title>Mijn apparaten</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -506,7 +506,127 @@
     color:var(--text-dim);
   }
 
+  /* -----------------------------------------------------------------------
+     Login gate -- a plain password screen shown before the catalogue
+     itself, in the same restrained palette/type as the rest of the page
+     (Fraunces headline, Inter labels, underline-only fields, no boxes).
+     Note this is a basic client-side gate, not real access control: the
+     check runs in this same static page's own JavaScript, so the
+     credentials and the full catalogue markup are still present in the
+     page's source/devtools regardless of this screen. It only stops a
+     casual visitor who opens the bare link from seeing the inventory
+     without typing the password first.
+  ----------------------------------------------------------------------- */
+  #loginOverlay{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    background:var(--bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+  #loginOverlay[hidden]{ display:none; }
+  #loginBox{ width:100%; max-width:280px; }
+  #loginBox h1{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:400;
+    font-optical-sizing:auto;
+    font-size:23px;
+    color:var(--text);
+    text-align:center;
+    margin:0 0 32px;
+  }
+  .login-field{ text-align:left; margin-bottom:20px; }
+  .login-field label{
+    display:block;
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight:500;
+    font-size:11px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    margin-bottom:6px;
+  }
+  .login-field input{
+    width:100%;
+    border:none;
+    border-bottom:1px solid var(--arrow);
+    background:transparent;
+    padding:6px 2px 8px;
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight:400;
+    font-size:15px;
+    color:var(--text);
+    outline:none;
+    transition:border-color .15s ease;
+  }
+  .login-field input:focus{ border-color:var(--text); }
+  #loginSubmit{
+    appearance:none;
+    -webkit-appearance:none;
+    width:100%;
+    border:none;
+    background:var(--text);
+    color:var(--bg);
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight:500;
+    font-size:13px;
+    letter-spacing:.04em;
+    padding:12px;
+    margin-top:6px;
+    cursor:pointer;
+    transition:opacity .15s ease;
+  }
+  #loginSubmit:hover{ opacity:.85; }
+  #loginError{
+    margin-top:16px;
+    min-height:1em;
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight:300;
+    font-size:12.5px;
+    color:#b3261e;
+    text-align:center;
+  }
+  /* Small, out-of-the-way way to end the remembered session (see
+     AUTH_STORAGE_KEY below) -- easy to ignore, not styled as a prominent
+     control, matching how little attention the rest of the chrome draws
+     to itself. */
+  #logoutLink{
+    position:fixed;
+    right:12px;
+    bottom:10px;
+    z-index:15000;
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight:300;
+    font-size:10.5px;
+    letter-spacing:.04em;
+    color:var(--arrow);
+    text-decoration:none;
+    opacity:.7;
+  }
+  #logoutLink:hover{ color:var(--text); opacity:1; }
+  #logoutLink[hidden]{ display:none; }
+
 </style>
+
+<div id="loginOverlay" hidden>
+  <form id="loginBox" autocomplete="off">
+    <h1>Mijn apparaten</h1>
+    <div class="login-field">
+      <label for="loginUser">Gebruikersnaam</label>
+      <input type="text" id="loginUser" autocomplete="username" autocapitalize="off" autocorrect="off" spellcheck="false" />
+    </div>
+    <div class="login-field">
+      <label for="loginPass">Wachtwoord</label>
+      <input type="password" id="loginPass" autocomplete="current-password" />
+    </div>
+    <button type="submit" id="loginSubmit">Inloggen</button>
+    <div id="loginError"></div>
+  </form>
+</div>
+<a href="#" id="logoutLink" hidden>Uitloggen</a>
 
 <div id="categoryTabs"><div id="catIndicator"></div></div>
 
@@ -641,6 +761,12 @@ const viewGridBtn = document.getElementById('viewGridBtn');
 const gridViewEl = document.getElementById('gridView');
 const gridWrapEl = document.getElementById('gridWrap');
 const gridEmptyEl = document.getElementById('gridEmpty');
+const loginOverlayEl = document.getElementById('loginOverlay');
+const loginFormEl = document.getElementById('loginBox');
+const loginUserEl = document.getElementById('loginUser');
+const loginPassEl = document.getElementById('loginPass');
+const loginErrorEl = document.getElementById('loginError');
+const logoutLinkEl = document.getElementById('logoutLink');
 
 // The single, plain (non-3D) block holding brand/type/power/manual-link
 // for whichever tool is currently front-and-center -- see its CSS rule
@@ -805,6 +931,16 @@ function setViewMode(mode) {
     // was showing, so both are refreshed explicitly on the way back in.
     resize();
     needsRender = true;
+    // render()'s "front changed" block only fires on an actual index
+    // change, so re-entering single view on the SAME tool as before (e.g.
+    // toggling the view buttons back and forth) would leave the URL
+    // without ?tool= even though the detail view is clearly showing one --
+    // set it here too, directly from whichever tool is already active.
+    if (tools[activeIdx]) syncUrlToTool(tools[activeIdx].data.key);
+  } else {
+    // Grid view has no single "current" device, so a ?tool= link left
+    // over from single view would be stale/misleading here.
+    clearUrlTool();
   }
 }
 
@@ -1064,6 +1200,54 @@ function positionFixedCaption() {
 --------------------------------------------------------------------- */
 let activeIdx = -1;
 
+/* ---------------------------------------------------------------------
+   Deep links -- a plain ?tool=<key> query parameter, so one specific
+   device can be bookmarked or shared as a URL that opens straight to its
+   detail (single) view instead of the default first category's grid
+   overview. Matched against TOOL_DATA's own stable "key" (e.g.
+   "tool_79_mojogearmgpb5", the same id build_data.py assigns each
+   device) rather than its display name, since names aren't unique or
+   guaranteed stable across edits. The address bar is kept in sync the
+   other direction too (see the front-changed block below and
+   setViewMode()) purely via history.replaceState -- no navigation, no
+   history-stack spam -- so browsing to a tool in single view and copying
+   the URL bar always reproduces a working link, without the user having
+   to know or type a key themselves.
+--------------------------------------------------------------------- */
+function syncUrlToTool(key) {
+  if (!window.history || !window.history.replaceState) return;
+  const url = new URL(window.location.href);
+  if (url.searchParams.get('tool') === key) return;
+  url.searchParams.set('tool', key);
+  window.history.replaceState(null, '', url);
+}
+function clearUrlTool() {
+  if (!window.history || !window.history.replaceState) return;
+  const url = new URL(window.location.href);
+  if (!url.searchParams.has('tool')) return;
+  url.searchParams.delete('tool');
+  window.history.replaceState(null, '', url);
+}
+function findToolByKey(key) {
+  return TOOL_DATA.find(d => d.key === key);
+}
+// Runs once at startup (see the bottom of this script): if the URL names
+// a specific device, opens straight to it -- otherwise leaves the normal
+// default-category grid overview alone.
+function openDeepLinkFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const wanted = params.get('tool');
+  if (!wanted) return false;
+  const target = findToolByKey(wanted);
+  if (!target) return false;
+  selectCategory(target.category);
+  const idx = tools.findIndex(t => t.data.key === target.key);
+  if (idx === -1) return false;
+  setViewMode('single');
+  jumpTo(idx);
+  return true;
+}
+
 function render() {
   const front = currentFrontIndex();
   if (front !== activeIdx) {
@@ -1076,6 +1260,7 @@ function render() {
       fixedPowerEl.textContent = d.power || '';
       fixedPowerEl.style.display = d.power ? '' : 'none';
       fixedLinkEl.href = d.manual;
+      if (viewMode === 'single') syncUrlToTool(d.key);
       // Rebuilt from scratch each time rather than diffed -- this only
       // runs on the (infrequent) "front card changed" edge, and the list
       // is at most a handful of links, so there's nothing to optimize.
@@ -1283,8 +1468,74 @@ if (document.fonts && document.fonts.ready) {
   });
 }
 
-selectCategory(CATEGORY_LABELS[0].key);
-animate();
+/* ---------------------------------------------------------------------
+   Basic login gate -- a plain client-side password check, run once at
+   startup, that holds off building/showing the catalogue at all
+   (startApp() below) until it passes. NOT real access control: this is a
+   static page, so the check itself and the full catalogue are already
+   sitting in this same script either way -- opening devtools and reading
+   the code that runs on submit still bypasses it. What changes here is
+   only that the credentials themselves aren't sitting in the source as
+   plain, readable text: CREDENTIAL_HASH is a SHA-256 digest of
+   "<gebruikersnaam>:<wachtwoord>" (lowercased username), computed with
+   the browser's own crypto.subtle -- recovering the actual username/
+   password from it means cracking the hash, not just reading the file.
+   A pass is remembered in this browser's localStorage (see
+   AUTH_STORAGE_KEY) so it isn't asked for on every visit -- only per
+   browser/device, and only until "Uitloggen" or a localStorage clear.
+--------------------------------------------------------------------- */
+const AUTH_STORAGE_KEY = 'mpt_authed_v1';
+// SHA-256 of "<gebruikersnaam>:<wachtwoord>" -- not the credentials themselves.
+const CREDENTIAL_HASH = '4d16814ba0cdfd6671586a386dbd42620043abfcc28443f2d8861fa290e8eb36';
+
+async function sha256Hex(text) {
+  const bytes = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function startApp() {
+  selectCategory(CATEGORY_LABELS[0].key);
+  openDeepLinkFromUrl();
+  animate();
+}
+
+function enterApp() {
+  loginOverlayEl.hidden = true;
+  logoutLinkEl.hidden = false;
+  startApp();
+}
+
+let storedAuth = null;
+try { storedAuth = localStorage.getItem(AUTH_STORAGE_KEY); } catch (err) { /* private mode etc -- fall through to the login form */ }
+
+if (storedAuth === '1') {
+  enterApp();
+} else {
+  loginOverlayEl.hidden = false;
+  loginUserEl.focus();
+}
+
+loginFormEl.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const attempt = `${loginUserEl.value.trim().toLowerCase()}:${loginPassEl.value}`;
+  const ok = (await sha256Hex(attempt)) === CREDENTIAL_HASH;
+  if (ok) {
+    try { localStorage.setItem(AUTH_STORAGE_KEY, '1'); } catch (err) { /* still let them in for this visit */ }
+    loginErrorEl.textContent = '';
+    enterApp();
+  } else {
+    loginErrorEl.textContent = 'Onjuiste gebruikersnaam of wachtwoord.';
+    loginPassEl.value = '';
+    loginPassEl.focus();
+  }
+});
+
+logoutLinkEl.addEventListener('click', (e) => {
+  e.preventDefault();
+  try { localStorage.removeItem(AUTH_STORAGE_KEY); } catch (err) {}
+  window.location.reload();
+});
 </script>
 
 </body></html>
